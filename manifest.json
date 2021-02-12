@@ -1,0 +1,7 @@
+{
+    "name": "Download Images from SNS",
+    "description": "Extension to download images from SNS",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["contextMenus"]
+}
