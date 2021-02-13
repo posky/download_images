@@ -3,5 +3,12 @@
     "description": "Extension to download images from SNS",
     "version": "1.0",
     "manifest_version": 3,
-    "permissions": ["contextMenus"]
+    "permissions": [
+        "contextMenus", "downloads"
+    ],
+    "icons": {
+        "16": "images/icon_image_16.png",
+        "48": "images/icon_image_48.png",
+        "128": "images/icon_image_128.png"
+    }
 }
