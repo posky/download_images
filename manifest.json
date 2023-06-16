@@ -1,14 +1,20 @@
 {
-    "name": "Download Images from SNS",
-    "description": "Extension to download images from SNS",
-    "version": "1.0",
     "manifest_version": 3,
-    "permissions": [
-        "contextMenus", "downloads"
-    ],
+    "name": "Reading time",
+    "version": "1.0",
+    "description": "Add the reading time to Chrome Extension documentation articles",
     "icons": {
         "16": "images/icon_image_16.png",
         "48": "images/icon_image_48.png",
         "128": "images/icon_image_128.png"
-    }
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/contents.js"],
+            "matches": [
+                "https://developer.chrome.com/docs/extensions/*",
+                "https://developer.chrome.com/docs/webstore/*"
+            ]
+        }
+    ]
 }
