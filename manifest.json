@@ -1,20 +1,22 @@
 {
     "manifest_version": 3,
-    "name": "Reading time",
+    "name": "Focus Mode",
+    "description": "Enable focus mode on Chrome's official Extensions and Chrome Web Store documentation.",
     "version": "1.0",
-    "description": "Add the reading time to Chrome Extension documentation articles",
     "icons": {
         "16": "images/icon_image_16.png",
         "48": "images/icon_image_48.png",
         "128": "images/icon_image_128.png"
     },
-    "content_scripts": [
-        {
-            "js": ["scripts/contents.js"],
-            "matches": [
-                "https://developer.chrome.com/docs/extensions/*",
-                "https://developer.chrome.com/docs/webstore/*"
-            ]
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {
+            "16": "images/icon_image_16.png",
+            "48": "images/icon_image_48.png",
+            "128": "images/icon_image_128.png"
         }
-    ]
+    },
+    "permissions": ["activeTab", "scripting"]
 }
